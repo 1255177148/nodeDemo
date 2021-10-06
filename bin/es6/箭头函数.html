@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>箭头函数</title>
+</head>
+<body>
+<script>
+    // 普通的函数
+    var sum = function (a, b) {
+        return a + b;
+    }
+    // 箭头函数，改进1，整体类似于lambda表达式
+    var sum = (a, b) => {
+        return a + b;
+    }
+
+    // 箭头函数，改进2
+    var sum = (a, b) => a + b;
+
+    console.log("测试有参的箭头函数", sum(10, 20));
+
+    var test = () => console.log("测试无参数的箭头函数");
+    test();
+</script>
+</body>
+</html>

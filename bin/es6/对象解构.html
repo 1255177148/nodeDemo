@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象解构</title>
+</head>
+<body>
+<script>
+    // es6语法中，对象的初始化简写，如果key和value的字段名一致，那么只写一个字段名就可以了，对象的方法，省略function，直接括号就行
+    var name = "测试";
+    var sex = "女";
+    var age = 1;
+    var info = {
+        name,
+        sex,
+        age,
+        go() {
+            console.log("我是一个方法");
+        }
+    }
+
+    // 普通的取对象的值
+    console.log(info.name);
+    info.go();
+
+    console.log(info["age"]);
+
+    // es6简写的取对象的值
+    var {name, age} = info;
+    console.log(name, age)
+</script>
+</body>
+</html>

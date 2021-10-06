@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象传播操作符</title>
+</head>
+<body>
+<script>
+    var name = "测试";
+    var sex = "女";
+    var age = 1;
+    var info = {
+        name,
+        sex,
+        age,
+        go() {
+            console.log("我是一个方法");
+        }
+    }
+    // 这里的name还是对象解构里快速获取对象属性的方式，后面的...是将取出name后剩余的对象属性全部赋给info2对象
+    var {name, ...info2} = info;
+    console.log(name);
+    console.log(info2);
+</script>
+</body>
+</html>
