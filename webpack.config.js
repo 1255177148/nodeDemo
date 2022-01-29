@@ -10,5 +10,11 @@ module.exports = {
         path: path.resolve(__dirname, "./dist"),
         // 定义输出的文件
         filename: "merge.js"
+    },
+    module: {
+        rules: [{
+            test: /\.css$/, // 把项目中所有的.css文件进行打包
+            use: ["style-loader", "css-loader"]
+        }]
     }
 }
